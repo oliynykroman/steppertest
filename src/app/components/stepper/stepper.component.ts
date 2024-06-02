@@ -60,7 +60,7 @@ export class StepperComponent implements AfterContentInit {
     this.stepChange.subscribe((data) => {
       stepperContent.forEach((s) => {
         s.isComponentShown = false;
-      })
+      });
       stepperContent[data].isComponentShown = true;
     });
   }

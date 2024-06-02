@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 
   get step(): number {
     const step = this.form?.get('step');
-    return step ? step.value - 1 : 0;
+    return step ? step.value : 0;
   }
 
   get customColor(): string {
@@ -65,7 +65,7 @@ export class AppComponent implements OnInit {
     this.form = this.fb.group({
       orientation: this.fb.control(this.orientationEnum.Horizontal),
       color: this.fb.control(this.colorEnum.Default),
-      step: this.fb.control(1),
+      step: this.fb.control(0),
       customColor: this.fb.control(false)
     });
   }
