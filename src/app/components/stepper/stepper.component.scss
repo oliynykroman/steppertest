@@ -10,6 +10,11 @@
   --borerColor: var(--gray-3);
 }
 
+.stepper {
+  display: flex;
+  color: var(--labelColor);
+}
+
 .steps {
   display: flex;
   flex-wrap: nowrap;
@@ -19,17 +24,26 @@
 }
 
 .light {
-  --labelColor: red;
+  --labelColor: skyblue;
   --labelColorActive: green;
   --activeColor: yellow;
-  --stepNumberColor: violet;
-  --stepNumberColorActive: blue;
-  --background: skyblue;
-  --borerColor: orange;
+  --stepNumberColor: white;
+  --stepNumberColorActive: black;
+  --background: blue;
+  --borerColor: white;
 }
 
 .horizontal {
-  flex-direction: row;
+
+  flex-direction: column;
+
+  .stepper-content {
+    margin-top: 30px;
+  }
+
+  .steps {
+    flex-direction: row;
+  }
 
   .step {
     flex-direction: column;
@@ -43,7 +57,7 @@
         bottom: 6px;
         left: 0;
         height: 4px;
-        border-radius: 0 37px 37px 0;
+        border-radius: 37px;
       }
 
       &:before {
@@ -58,14 +72,29 @@
       }
     }
 
+    &.prev {
+      &:after {
+        border-radius: 0 37px 37px 0;
+      }
+    }
+
     &-label {
       margin-bottom: 10px;
     }
+
   }
 }
 
 .vertical {
-  flex-direction: column;
+  flex-direction: row;
+
+  .stepper-content {
+    margin-left: 30px;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
 
   .step {
     flex-direction: row-reverse;
@@ -97,6 +126,12 @@
     &-label {
       margin-left: 10px;
     }
+
+    &.prev {
+      &:after {
+        border-radius: 0 0 37px 37px;
+      }
+    }
   }
 }
 
@@ -107,9 +142,9 @@
   box-shadow: none;
   background: transparent;
   position: relative;
-  color: var(--labelColor);
   transition: color .5s ease-out;
   cursor: pointer;
+  color: var(--labelColor);
 
   &:first-child {
     &:before, &:after {

@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, inject, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {StepInterface} from "./types/step.interface";
 import {StepperConfigService} from "./services/data.service";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {StepperOrientationEnum} from "./components/stepper/enums/orientation.enum";
 import {StepperColorEnum} from "./components/stepper/enums/color.enum";
 
@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
 
   private initForm() {
     this.form = this.fb.group({
-      orientation: this.fb.control(this.orientationEnum.Vertical),
+      orientation: this.fb.control(this.orientationEnum.Horizontal),
       color: this.fb.control(this.colorEnum.Default),
       step: this.fb.control(1),
       customColor: this.fb.control(false)
