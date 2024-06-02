@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
 
   private initForm() {
     this.form = this.fb.group({
-      orientation: this.fb.control(this.orientationEnum.Vertical),
+      orientation: this.fb.control(this.orientationEnum.Horizontal),
       color: this.fb.control(this.colorEnum.Default),
       step: this.fb.control(1),
       customColor: this.fb.control(false)

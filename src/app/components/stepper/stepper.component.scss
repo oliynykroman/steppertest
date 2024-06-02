@@ -57,7 +57,7 @@
         bottom: 6px;
         left: 0;
         height: 4px;
-        border-radius: 0 37px 37px 0;
+        border-radius: 37px;
       }
 
       &:before {
@@ -75,6 +75,7 @@
     &-label {
       margin-bottom: 10px;
     }
+
   }
 }
 
@@ -210,6 +211,12 @@
       &__number {
         opacity: 0;
         transition: opacity .3s ease-out;
+      }
+    }
+
+    &:first-child {
+      &:after {
+        border-radius: 0 37px 37px 0;
       }
     }
   }
