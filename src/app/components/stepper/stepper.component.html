@@ -1,6 +1,6 @@
-<ng-container *ngIf="steps">
+<div class="stepper" [ngClass]="[orientation]">
   <ol class="steps"
-      [ngClass]="[orientation, color]"
+      [ngClass]="[color]"
       [ngStyle]="{'--step': currentStep}">
     <ng-container *ngFor="let step of steps; let index = index; let last = last">
       <li class="step"
@@ -18,4 +18,7 @@
       </li>
     </ng-container>
   </ol>
-</ng-container>
+  <div class="stepper-content">
+      <ng-content></ng-content>
+  </div>
+</div>

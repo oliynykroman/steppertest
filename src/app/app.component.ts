@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component, inject, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {StepInterface} from "./types/step.interface";
 import {StepperConfigService} from "./services/data.service";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {StepperOrientationEnum} from "./components/stepper/enums/orientation.enum";
 import {StepperColorEnum} from "./components/stepper/enums/color.enum";
 

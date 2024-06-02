@@ -10,6 +10,11 @@
   --borerColor: var(--gray-3);
 }
 
+.stepper {
+  display: flex;
+  color: var(--labelColor);
+}
+
 .steps {
   display: flex;
   flex-wrap: nowrap;
@@ -29,7 +34,16 @@
 }
 
 .horizontal {
-  flex-direction: row;
+
+  flex-direction: column;
+
+  .stepper-content {
+    margin-top: 30px;
+  }
+
+  .steps {
+    flex-direction: row;
+  }
 
   .step {
     flex-direction: column;
@@ -65,7 +79,15 @@
 }
 
 .vertical {
-  flex-direction: column;
+  flex-direction: row;
+
+  .stepper-content {
+    margin-left: 30px;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
 
   .step {
     flex-direction: row-reverse;
@@ -107,7 +129,6 @@
   box-shadow: none;
   background: transparent;
   position: relative;
-  color: var(--labelColor);
   transition: color .5s ease-out;
   cursor: pointer;
 

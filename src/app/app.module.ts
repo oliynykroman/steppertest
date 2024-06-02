@@ -6,16 +6,20 @@ import {StepperComponent} from './components/stepper/stepper.component';
 import {StepperConfigService} from "./services/data.service";
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
+import {StepperContentComponent} from "./components/stepper/components/stepper-content/stepper-content.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    StepperComponent
+    StepperComponent,
+    StepperContentComponent
   ],
   providers: [StepperConfigService],
   bootstrap: [AppComponent]
