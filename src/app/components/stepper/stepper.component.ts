@@ -61,7 +61,9 @@ export class StepperComponent implements AfterContentInit {
       stepperContent.forEach((s) => {
         s.isComponentShown = false;
       });
-      stepperContent[data].isComponentShown = true;
+      if (currentStepContent) {
+        stepperContent[data].isComponentShown = true;
+      }
     });
   }
 }
