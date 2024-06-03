@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+  --dark: #0C0C0C;
+  --light: #ffffff;
+  --accent: #22ECE9;
+  --gray-1: #8D8D8D;
+  --gray-2: #202020;
+  --gray-3: #383838;
+  --gray-4: #A5A5A5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
