@@ -30,6 +30,7 @@ import {NgClass, NgIf} from "@angular/common";
   ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class StepperContentComponent {
   @HostBinding('@fade')
   get currentAnimationState() {
